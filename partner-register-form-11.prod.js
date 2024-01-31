@@ -207,7 +207,7 @@ function initializeForm() {
       },
       email: {
         required: true,
-        email: true,
+        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
         remote: {
           url: api + `/validations/email`,
           type: "GET",
@@ -259,6 +259,7 @@ function initializeForm() {
       },
       email: {
         remote: "This email is already in use",
+        pattern: 'Please enter a valid email address.'
       },
     },
   });
