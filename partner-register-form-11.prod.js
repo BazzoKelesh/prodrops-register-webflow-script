@@ -207,7 +207,7 @@ function initializeForm() {
       },
       email: {
         required: true,
-        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+        pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,6}$/,
         remote: {
           url: api + `/validations/email`,
           type: "GET",
